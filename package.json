@@ -20,11 +20,20 @@
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.0rc5",
+    "express": "3.x",
     "jade": "*",
     "stylus": "*",
     "nib": "*",
-    "h5bp": "*"
+    "h5bp": "*",
+    "mongoose": "3.x",
+    "bcrypt": "*",
+    "i18next": "1.x",
+    "config": "*",
+    "yaml": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "connect-flash": "*",
+    "async": "*"
   },
   "devDependencies": {
     "grunt": "~0.3.15",

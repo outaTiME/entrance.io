@@ -1,0 +1,27 @@
+extends templates/dialog
+
+block title
+  title= t("login.page_title")
+
+append box
+  .login
+      h2= t("login.title")
+      hr.soften
+      - var klass = ''
+      - if (message.length > 0) {
+        - klass = 'error';
+        .alert.alert-error
+          strong Oh snap!&nbsp;
+          | #{t("login.error")}
+      - }
+      form(action="/login", method='POST')
+        fieldset
+          div
+            .control-group(class=klass)
+              .controls
+                input(name="username", type="text", placeholder=t("login.username"), autofocus)
+            .control-group(class=klass)
+              .controls
+                input(name="password", type="password", placeholder=t("login.password"))
+        .submit
+          button.btn.btn-primary(type="submit", onclick="$(this).css('visibility', 'hidden');") #{t("login.signin")}

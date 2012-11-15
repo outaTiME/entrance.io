@@ -1,4 +1,9 @@
-extends box
+extends templates/box
 
 append box
-  h2 Hello, from nbp!
+  .index
+    h2= t('index.message')
+    - if (!isAuthenticated) {
+      a.btn.btn-primary.btn-large(href="login") #{t("index.login")}
+    - }
+
