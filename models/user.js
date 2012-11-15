@@ -28,7 +28,8 @@ var UserSchema = new Schema({
       'user',
       'admin'
     ]
-  }
+  },
+  _company : { type: Schema.Types.ObjectId, ref: 'Company' },
 });
 
 UserSchema.pre('save', function (next) {

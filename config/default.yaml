@@ -3,6 +3,6 @@ server:
   port: 3000
 
 database:
-  uri: mongodb://localhost/nbp
+  uri: mongodb://localhost/entrance
 
 verbose: true
